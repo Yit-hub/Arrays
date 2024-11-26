@@ -77,10 +77,22 @@ let result = array1.concat(array2);`,
             // Agrega más ejemplos para cada método aquí siguiendo este formato. <------------------------------AQUÍ-------------------------------->
             {
                 method: "Array.entries()",
-                description: ""
-            }
-
-
+                description: "Crea un iterador de pares [índice, valor]",
+                example: `const fruits = ["Banana", "Orange", "Apple", "Mango"];
+const list = fruits.entries();
+let text = "";
+for (let x of list) {
+  text += x;
+}`,
+                execute: () => {
+                    const fruits = ["Banana", "Orange", "Apple", "Mango"];
+                    const list = fruits.entries();
+                    let text = "";
+                    for (let x of list) {
+                        text += x;
+                    }
+                    
+                }
 
         ];
         // Renderizando las secciones dinámicamente
