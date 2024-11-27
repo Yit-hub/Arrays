@@ -32,6 +32,8 @@ console.log(array); // [40, 0, 0, 40, 50]
 let filtrado = array.filter(n => n > 30);
 console.log(filtrado); // [40, 40, 50]
 
+
+
 // 8. find(): Devuelve el primer elemento que cumpla con una condición.
 console.log(array.find(n => n > 30)); // 40
 

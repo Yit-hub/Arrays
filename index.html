@@ -85,20 +85,62 @@ console.log(lista.next().value);
 
 }`,
                 execute: () => {
-                    const a = ["a","b"];
+                    const a = ["a", "b"];
                     const lista = a.entries();
                     for (const elemento of lista) {
                         return element;
                     }
                 },
-            },{
+            }, {
                 method: "Array.prototype.every()",
                 description: "Verifica si todos los elementos cumplen una condición",
-                example:``,
-                execute: ()=> {
+                example: `
+                    const array = ["1","10","11","12"];
 
+                    const contieneUno = (currentValue) => currentValue.includes("1");
+                    return array.every(contieneUno);`,
+                execute: () => {
+                    const array = ["1", "10", "11", "12"];
+
+                    const contieneUno = (currentValue) => currentValue.includes("1");
+                    return array.every(contieneUno);
                 }
-                
+
+            }, {
+                method: "Arra.prototype.fill()",
+                description: "Rellena el array con un valor desde un índice inicial a uno final",
+                example: `const array=["a","b","c","d","e"];
+                    array.fill(1,2,4);
+                    console.log(array);`,
+                execute: () => {
+                    const array = ["a", "b", "c", "d", "e"];
+                    array.fill(1, 2, 4);
+                    return array;
+                }
+            }, {
+                method: "Array.prototype.filter()",
+                description: "Crea un nuevo array con elementos que cumplan una condición",
+                example: `
+                    const array = ["1","0","11","12"];
+const contieneUno = (currentValue) => currentValue.includes("1");
+return array.filter(contieneUno);`,
+                execute: () => {
+                    const array = ["1", "0", "11", "12"];
+                    const contieneUno = (currentValue) => currentValue.includes("1");
+                    return array.filter(contieneUno);
+                }
+            },{
+                method:"Array.prototype.find()",
+                description:"Devuelve el primer elemento que cumpla con una condición",
+                example:`
+                     const array = ["0", "0", "11", "12"];
+                    const contieneUno = (currentValue) => currentValue.includes("1");
+                   return array.find(contieneUno);`,
+                execute:()=>{
+                     const array = ["0", "0", "11", "12"];
+                    const contieneUno = (currentValue) => currentValue.includes("1");
+                   return array.find(contieneUno); 
+                }
             }
         ];
         // Renderizando las secciones dinámicamente
