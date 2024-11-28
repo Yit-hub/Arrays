@@ -302,7 +302,69 @@ return array.filter(contieneUno);`,
                 description:"Reduce pero desde el final",
                 example:``,
                 execute:()=>{
+
+                }
+            },{
+                method:"Array.prototype.reverse()",
+                description:"Invierte el orden del array",
+                example:` const array=[1,2,3,4];
+                    return array.reverse();
+                    `,
+                execute:()=>{
+                    const array=[1,2,3,4];
+                    return array.reverse();
                     
+                }
+            },{
+                method:"Array.prototype.shift()",
+                description:"Elimina el primer elemento",
+                example:`
+                    const array=[0,1,2,3,4];
+                    array.shift();
+                    return array;`,
+                execute:()=>{
+                    const array=[0,1,2,3,4];
+                    array.shift();
+                    return array;
+                }
+            },{
+                method:"Array.prototype.slice()",
+                description:"Crea una copia parcial del array",
+                example:`
+                    const array=["no","no","este","este","no"];
+                    return array.slice(2,4);`,
+                execute:()=>{
+                    const array=["no","no","este","este","no"];
+                    return array.slice(2,4);
+                }
+            },{
+                method:"Array.prototype.some()",
+                description:"Verifica si algún elemento cumple una condición",
+                example:`
+                    const array=["no","no","cumple"];
+                    const cumple= (currentValue) => currentValue == "cumple";
+                    return array.some(cumple);`,
+                execute:()=>{
+                    const array=["no","no","cumple"];
+                    const cumple= (currentValue) => currentValue == "cumple";
+                    return array.some(cumple);
+                }
+            },{
+                method:"Array.prototype.sort()",
+                description:"Ordena los elementos array",
+                example:`       const array=["arbol","amarillo","vaca","casa"];
+                    return array.sort();
+              `,
+                execute:()=>{
+                    const array=["arbol","amarillo","vaca","casa"];
+                    return array.sort();
+                }
+            },{
+                method: "Array.prototype.splice()",
+                description:"Agrega, elimina o reemplaza elementos",
+                example:``,
+                execute:()=>{
+                    const array=[];
                 }
             }
         ];
