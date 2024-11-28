@@ -141,6 +141,119 @@ return array.filter(contieneUno);`,
                     const contieneUno = (currentValue) => currentValue.includes("1");
                    return array.find(contieneUno); 
                 }
+            },{
+                method:"Array.prototype.findIndex()",
+                description:"Devuelve el índice del primer elemento que cumpla una condición",
+                example:`
+                     const array = ["0", "0", "11", "12"];
+                    const contieneUno = (currentValue) => currentValue.includes("1");
+                   return array.findIndex(contieneUno);`,
+                execute:()=>{
+
+                     const array = ["0", "0", "11", "12"];
+                    const contieneUno = (currentValue) => currentValue.includes("1");
+                   return array.findIndex(contieneUno);
+                }
+            },{
+                method:"Array.prototype.findLast()",
+                description:"Devuelve el último elemento que cumpla una condición",
+                example:`
+                     const array = ["0", "0", "11", "12"];
+                    const contieneUno = (currentValue) => currentValue.includes("1");
+                   return array.findLast(contieneUno);`,
+                execute:()=>{
+
+
+                     const array = ["0", "0", "11", "12"];
+                    const contieneUno = (currentValue) => currentValue.includes("1");
+                   return array.findLast(contieneUno);
+                }
+            },{
+                method:"Array.prototype.findLastIndex()",
+                description:"Índice del último elemento que cumpla una condición",
+                example:`const array = ["0", "0", "11", "12"];
+                    const contieneUno = (currentValue) => currentValue.includes("1");
+                   return array.findLastIndex(contieneUno);`,
+                execute:()=>{
+
+                     const array = ["0", "0", "11", "12"];
+                    const contieneUno = (currentValue) => currentValue.includes("1");
+                   return array.findLastIndex(contieneUno);
+
+                }
+            },{
+                method:"Array.prototype.flat()",
+                description:"Aplana un array multidimensional",
+                example:`
+                    const array=["nombre","apellido","edad",["profesor","doctor"]];
+                    return array.flat();`,
+                execute:()=>{
+                    const array=["nombre","apellido","edad",["profesor","doctor"]];
+                    return array.flat();
+                }
+            },{
+                method:"Array.prototype.flatMap()",
+                description:"Aplica una función y aplana el resultado",
+                example:`    const array = ["hola","hermano","hombre","jefe","gato"];
+                    return array.flatMap((currentValue) => (currentValue.includes("h") ? ["tiene","h"]: "no tiene h") );`,
+                execute:()=>{
+                    const array = ["hola","hermano","hombre","jefe","gato"];
+                    return array.flatMap((currentValue) => (currentValue.includes("h") ? ["tiene","h"]: "no tiene h") );
+                }
+            },{
+                method:"Array.prototype.forEach()",
+                description:"Ejecuta una función por cada elemento",
+                example:`const array=[1,2,3,4,5];
+                    array.forEach((element) => console.log(element));`,
+                execute:()=>{
+                    const array=[1,2,3,4,5];
+                    array.forEach((element) => console.log(element));
+                }                
+            },{
+                method: "Array.prototype.includes()",
+                description:"Comprueba si el array contiene un valor",
+                example:`                    const array=[1,2,3,4,5];
+                    return array.includes(1);
+
+`,
+                execute:()=>{
+                    const array=[1,2,3,4,5];
+                    return array.includes(1);
+
+                }
+            },{
+                method:"Array.prototype.indexOf()",
+                description: "Encuentra el índice de un elemento",
+                example:`
+                    const array =["hola","adios","bye"];
+                    return array.indexOf("adios");`,
+                execute:()=>{
+                    const array =["hola","adios","bye"];
+                    return array.indexOf("adios");
+                }
+            },{
+                method:"Array.prototype.join()",
+                description:"Combina los elementos del array en un string",
+                example:`
+                    const array=["hola","me","llamo","Daniel"];
+                    return array.join(" ");`,
+                execute:()=>{
+                    const array=["hola","me","llamo","Daniel"];
+                    return array.join(" ");
+                }
+            },{
+                method:"Array.prototype.keys()",
+                description:"Iterador de índices",
+                example:``,
+                execute:()=>{
+                    const array=["a","b","c","d"];
+                    let texto;
+                    const lista = array.keys();
+                    for(let element of lista){
+                        texto += element +"<br>";
+                    }
+                    return text;
+                }
             }
         ];
         // Renderizando las secciones dinámicamente
