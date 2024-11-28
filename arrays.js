@@ -113,6 +113,11 @@ console.log(array); // [40, 40, 0, 0]
 array.splice(1, 2, 100, 200); // Elimina 2 elementos desde el índice 1 y agrega 100, 200
 console.log(array); // [40, 100, 200, 0]
 
+
+
+
+
+
 // 31. [@@iterator](): Iterador de valores (implícito en bucles `for...of`).
 for (const value of array) {
     console.log(value); // 40, 100, 200, 0

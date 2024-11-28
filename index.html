@@ -365,7 +365,16 @@ return array.filter(contieneUno);`,
                 example:``,
                 execute:()=>{
                     const array=['Jan', 'March', 'April', 'June'];
-
+                    array.splice(3,0,'May');
+                    return array;
+                }
+                
+            },{
+                method:"iterator",
+                description:"Iterador de valores",
+                example:``,
+                execute:()=>{
+                    const array=[]
                 }
             }
         ];
