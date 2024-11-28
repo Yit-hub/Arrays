@@ -247,12 +247,62 @@ return array.filter(contieneUno);`,
                 example:``,
                 execute:()=>{
                     const array=["a","b","c","d"];
-                    let texto;
-                    const lista = array.keys();
-                    for(let element of lista){
-                        texto += element +"<br>";
-                    }
-                    return text;
+                   return array.keys(); 
+                }
+            },{
+                method:"Array.prototype.lastIndexOf()",
+                description:"Encuentra el último índice de un elemento",
+                example:`
+                    const array=["hola","adios","hola","adios"];
+                    return array.lastIndexOf("adios");`,
+                execute:()=>{
+                    const array=["hola","adios","hola","adios"];
+                    return array.lastIndexOf("adios");
+                }
+            },{
+                method:"Array.prototype.map()",
+                description:"Crea un nuevo array transformando los elementos",
+                example:`
+                    const array = ["ola","ombre","umo"];
+                    return array.map((currentValue)=>"h"+currentValue);`,
+                execute:()=>{
+                    const array = ["ola","ombre","umo"];
+                    return array.map((currentValue)=>"h"+currentValue);
+                }
+            },{
+                method:"Array.prototype.pop()",
+                description:"Elimina el último elemento",
+                example:`
+                    const array = [1,2,3,4,5,"a"];
+                    return array.pop();`,
+                execute:()=>{
+                    const array = [1,2,3,4,5,"a"];
+                    return array.pop();
+                }
+            }, {
+                method:"Array.prototype.push()",
+                description:"Agrega ekementos al final",
+                example:``,
+                execute:()=>{
+
+                    const array=[1,2,3,4];
+                    array.push(5);
+                    return array;
+                }
+            },{
+                method:"Array.prototype.reduce()",
+                description:"Reduce el array a un valor acumulado",
+                example:``,
+                execute:()=>{
+                    const array =[2,3,4,5,6];
+                    return array.reduce(((acc, n) => acc + n, 0));
+                }
+            },{
+                method:"Array.prototype.reduceRight()",
+                description:"Reduce pero desde el final",
+                example:``,
+                execute:()=>{
+                    
                 }
             }
         ];
