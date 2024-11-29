@@ -387,11 +387,33 @@ return array.filter(contieneUno);`,
             },{
                 method:"Array.prototype.toReversed()",
                 description:"Devuelve una copia del array invertida(sin modificar el original)",
-                example:``,
+                example:`
+                     const array=[1,2,3,4,5];
+                     return array.toReversed();`,
                 execute:()=>{
                      const array=[1,2,3,4,5];
                      return array.toReversed();
                 
+                }
+            },{
+                method:"Array.prototype.toSorted()",
+                description: "Devuelve una copia ordenada.",
+                example:`
+                    const array=[3,1,2,4,8,5];
+                    return array.toSorted();`,
+                execute:()=>{
+                    const array=[3,1,2,4,8,5];
+                    return array.toSorted();
+                }
+            },{
+                method:"Array.prototype.toSpliced()",
+                description:"Devuelve una copia con elementos eliminados y reemplazados",
+                example:`
+                    const array =["Enero","Febrero","Abril"];
+                    return array.toSpliced(2,0,"Marzo");`,
+                execute:()=>{
+                    const array =["Enero","Febrero","Abril"];
+                    return array.toSpliced(2,0,"Marzo");
                 }
             },{
                 method:""
