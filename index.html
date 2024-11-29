@@ -129,294 +129,337 @@ return array.filter(contieneUno);`,
                     const contieneUno = (currentValue) => currentValue.includes("1");
                     return array.filter(contieneUno);
                 }
-            },{
-                method:"Array.prototype.find()",
-                description:"Devuelve el primer elemento que cumpla con una condición",
-                example:`
+            }, {
+                method: "Array.prototype.find()",
+                description: "Devuelve el primer elemento que cumpla con una condición",
+                example: `
                      const array = ["0", "0", "11", "12"];
                     const contieneUno = (currentValue) => currentValue.includes("1");
                    return array.find(contieneUno);`,
-                execute:()=>{
-                     const array = ["0", "0", "11", "12"];
+                execute: () => {
+                    const array = ["0", "0", "11", "12"];
                     const contieneUno = (currentValue) => currentValue.includes("1");
-                   return array.find(contieneUno); 
+                    return array.find(contieneUno);
                 }
-            },{
-                method:"Array.prototype.findIndex()",
-                description:"Devuelve el índice del primer elemento que cumpla una condición",
-                example:`
+            }, {
+                method: "Array.prototype.findIndex()",
+                description: "Devuelve el índice del primer elemento que cumpla una condición",
+                example: `
                      const array = ["0", "0", "11", "12"];
                     const contieneUno = (currentValue) => currentValue.includes("1");
                    return array.findIndex(contieneUno);`,
-                execute:()=>{
+                execute: () => {
 
-                     const array = ["0", "0", "11", "12"];
+                    const array = ["0", "0", "11", "12"];
                     const contieneUno = (currentValue) => currentValue.includes("1");
-                   return array.findIndex(contieneUno);
+                    return array.findIndex(contieneUno);
                 }
-            },{
-                method:"Array.prototype.findLast()",
-                description:"Devuelve el último elemento que cumpla una condición",
-                example:`
+            }, {
+                method: "Array.prototype.findLast()",
+                description: "Devuelve el último elemento que cumpla una condición",
+                example: `
                      const array = ["0", "0", "11", "12"];
                     const contieneUno = (currentValue) => currentValue.includes("1");
                    return array.findLast(contieneUno);`,
-                execute:()=>{
+                execute: () => {
 
 
-                     const array = ["0", "0", "11", "12"];
+                    const array = ["0", "0", "11", "12"];
                     const contieneUno = (currentValue) => currentValue.includes("1");
-                   return array.findLast(contieneUno);
+                    return array.findLast(contieneUno);
                 }
-            },{
-                method:"Array.prototype.findLastIndex()",
-                description:"Índice del último elemento que cumpla una condición",
-                example:`const array = ["0", "0", "11", "12"];
+            }, {
+                method: "Array.prototype.findLastIndex()",
+                description: "Índice del último elemento que cumpla una condición",
+                example: `const array = ["0", "0", "11", "12"];
                     const contieneUno = (currentValue) => currentValue.includes("1");
                    return array.findLastIndex(contieneUno);`,
-                execute:()=>{
+                execute: () => {
 
-                     const array = ["0", "0", "11", "12"];
+                    const array = ["0", "0", "11", "12"];
                     const contieneUno = (currentValue) => currentValue.includes("1");
-                   return array.findLastIndex(contieneUno);
+                    return array.findLastIndex(contieneUno);
 
                 }
-            },{
-                method:"Array.prototype.flat()",
-                description:"Aplana un array multidimensional",
-                example:`
+            }, {
+                method: "Array.prototype.flat()",
+                description: "Aplana un array multidimensional",
+                example: `
                     const array=["nombre","apellido","edad",["profesor","doctor"]];
                     return array.flat();`,
-                execute:()=>{
-                    const array=["nombre","apellido","edad",["profesor","doctor"]];
+                execute: () => {
+                    const array = ["nombre", "apellido", "edad", ["profesor", "doctor"]];
                     return array.flat();
                 }
-            },{
-                method:"Array.prototype.flatMap()",
-                description:"Aplica una función y aplana el resultado",
-                example:`    const array = ["hola","hermano","hombre","jefe","gato"];
+            }, {
+                method: "Array.prototype.flatMap()",
+                description: "Aplica una función y aplana el resultado",
+                example: `    const array = ["hola","hermano","hombre","jefe","gato"];
                     return array.flatMap((currentValue) => (currentValue.includes("h") ? ["tiene","h"]: "no tiene h") );`,
-                execute:()=>{
-                    const array = ["hola","hermano","hombre","jefe","gato"];
-                    return array.flatMap((currentValue) => (currentValue.includes("h") ? ["tiene","h"]: "no tiene h") );
+                execute: () => {
+                    const array = ["hola", "hermano", "hombre", "jefe", "gato"];
+                    return array.flatMap((currentValue) => (currentValue.includes("h") ? ["tiene", "h"] : "no tiene h"));
                 }
-            },{
-                method:"Array.prototype.forEach()",
-                description:"Ejecuta una función por cada elemento",
-                example:`const array=[1,2,3,4,5];
+            }, {
+                method: "Array.prototype.forEach()",
+                description: "Ejecuta una función por cada elemento",
+                example: `const array=[1,2,3,4,5];
                     array.forEach((element) => console.log(element));`,
-                execute:()=>{
-                    const array=[1,2,3,4,5];
+                execute: () => {
+                    const array = [1, 2, 3, 4, 5];
                     array.forEach((element) => console.log(element));
-                }                
-            },{
+                }
+            }, {
                 method: "Array.prototype.includes()",
-                description:"Comprueba si el array contiene un valor",
-                example:`                    const array=[1,2,3,4,5];
+                description: "Comprueba si el array contiene un valor",
+                example: `                    const array=[1,2,3,4,5];
                     return array.includes(1);
 
 `,
-                execute:()=>{
-                    const array=[1,2,3,4,5];
+                execute: () => {
+                    const array = [1, 2, 3, 4, 5];
                     return array.includes(1);
 
                 }
-            },{
-                method:"Array.prototype.indexOf()",
+            }, {
+                method: "Array.prototype.indexOf()",
                 description: "Encuentra el índice de un elemento",
-                example:`
+                example: `
                     const array =["hola","adios","bye"];
                     return array.indexOf("adios");`,
-                execute:()=>{
-                    const array =["hola","adios","bye"];
+                execute: () => {
+                    const array = ["hola", "adios", "bye"];
                     return array.indexOf("adios");
                 }
-            },{
-                method:"Array.prototype.join()",
-                description:"Combina los elementos del array en un string",
-                example:`
+            }, {
+                method: "Array.prototype.join()",
+                description: "Combina los elementos del array en un string",
+                example: `
                     const array=["hola","me","llamo","Daniel"];
                     return array.join(" ");`,
-                execute:()=>{
-                    const array=["hola","me","llamo","Daniel"];
+                execute: () => {
+                    const array = ["hola", "me", "llamo", "Daniel"];
                     return array.join(" ");
                 }
-            },{
-                method:"Array.prototype.keys()",
-                description:"Iterador de índices",
-                example:``,
-                execute:()=>{
-                    const array=["a","b","c","d"];
-                   return array.keys(); 
+            }, {
+                method: "Array.prototype.keys()",
+                description: "Iterador de índices",
+                example: ``,
+                execute: () => {
+                    const array = ["a", "b", "c", "d"];
+                    return array.keys();
                 }
-            },{
-                method:"Array.prototype.lastIndexOf()",
-                description:"Encuentra el último índice de un elemento",
-                example:`
+            }, {
+                method: "Array.prototype.lastIndexOf()",
+                description: "Encuentra el último índice de un elemento",
+                example: `
                     const array=["hola","adios","hola","adios"];
                     return array.lastIndexOf("adios");`,
-                execute:()=>{
-                    const array=["hola","adios","hola","adios"];
+                execute: () => {
+                    const array = ["hola", "adios", "hola", "adios"];
                     return array.lastIndexOf("adios");
                 }
-            },{
-                method:"Array.prototype.map()",
-                description:"Crea un nuevo array transformando los elementos",
-                example:`
+            }, {
+                method: "Array.prototype.map()",
+                description: "Crea un nuevo array transformando los elementos",
+                example: `
                     const array = ["ola","ombre","umo"];
                     return array.map((currentValue)=>"h"+currentValue);`,
-                execute:()=>{
-                    const array = ["ola","ombre","umo"];
-                    return array.map((currentValue)=>"h"+currentValue);
+                execute: () => {
+                    const array = ["ola", "ombre", "umo"];
+                    return array.map((currentValue) => "h" + currentValue);
                 }
-            },{
-                method:"Array.prototype.pop()",
-                description:"Elimina el último elemento",
-                example:`
+            }, {
+                method: "Array.prototype.pop()",
+                description: "Elimina el último elemento",
+                example: `
                     const array = [1,2,3,4,5,"a"];
                     return array.pop();`,
-                execute:()=>{
-                    const array = [1,2,3,4,5,"a"];
+                execute: () => {
+                    const array = [1, 2, 3, 4, 5, "a"];
                     return array.pop();
                 }
             }, {
-                method:"Array.prototype.push()",
-                description:"Agrega ekementos al final",
-                example:``,
-                execute:()=>{
+                method: "Array.prototype.push()",
+                description: "Agrega ekementos al final",
+                example: ``,
+                execute: () => {
 
-                    const array=[1,2,3,4];
+                    const array = [1, 2, 3, 4];
                     array.push(5);
                     return array;
                 }
-            },{
-                method:"Array.prototype.reduce()",
-                description:"Reduce el array a un valor acumulado",
-                example:``,
-                execute:()=>{
-                    const array =[2,3,4,5,6];
+            }, {
+                method: "Array.prototype.reduce()",
+                description: "Reduce el array a un valor acumulado",
+                example: ``,
+                execute: () => {
+                    const array = [2, 3, 4, 5, 6];
                     return array.reduce(((acc, n) => acc + n, 0));
                 }
-            },{
-                method:"Array.prototype.reduceRight()",
-                description:"Reduce pero desde el final",
-                example:``,
-                execute:()=>{
+            }, {
+                method: "Array.prototype.reduceRight()",
+                description: "Reduce pero desde el final",
+                example: ``,
+                execute: () => {
 
                 }
-            },{
-                method:"Array.prototype.reverse()",
-                description:"Invierte el orden del array",
-                example:` const array=[1,2,3,4];
+            }, {
+                method: "Array.prototype.reverse()",
+                description: "Invierte el orden del array",
+                example: ` const array=[1,2,3,4];
                     return array.reverse();
                     `,
-                execute:()=>{
-                    const array=[1,2,3,4];
+                execute: () => {
+                    const array = [1, 2, 3, 4];
                     return array.reverse();
-                    
+
                 }
-            },{
-                method:"Array.prototype.shift()",
-                description:"Elimina el primer elemento",
-                example:`
+            }, {
+                method: "Array.prototype.shift()",
+                description: "Elimina el primer elemento",
+                example: `
                     const array=[0,1,2,3,4];
                     array.shift();
                     return array;`,
-                execute:()=>{
-                    const array=[0,1,2,3,4];
+                execute: () => {
+                    const array = [0, 1, 2, 3, 4];
                     array.shift();
                     return array;
                 }
-            },{
-                method:"Array.prototype.slice()",
-                description:"Crea una copia parcial del array",
-                example:`
+            }, {
+                method: "Array.prototype.slice()",
+                description: "Crea una copia parcial del array",
+                example: `
                     const array=["no","no","este","este","no"];
                     return array.slice(2,4);`,
-                execute:()=>{
-                    const array=["no","no","este","este","no"];
-                    return array.slice(2,4);
+                execute: () => {
+                    const array = ["no", "no", "este", "este", "no"];
+                    return array.slice(2, 4);
                 }
-            },{
-                method:"Array.prototype.some()",
-                description:"Verifica si algún elemento cumple una condición",
-                example:`
+            }, {
+                method: "Array.prototype.some()",
+                description: "Verifica si algún elemento cumple una condición",
+                example: `
                     const array=["no","no","cumple"];
                     const cumple= (currentValue) => currentValue == "cumple";
                     return array.some(cumple);`,
-                execute:()=>{
-                    const array=["no","no","cumple"];
-                    const cumple= (currentValue) => currentValue == "cumple";
+                execute: () => {
+                    const array = ["no", "no", "cumple"];
+                    const cumple = (currentValue) => currentValue == "cumple";
                     return array.some(cumple);
                 }
-            },{
-                method:"Array.prototype.sort()",
-                description:"Ordena los elementos array",
-                example:`       const array=["arbol","amarillo","vaca","casa"];
+            }, {
+                method: "Array.prototype.sort()",
+                description: "Ordena los elementos array",
+                example: `       const array=["arbol","amarillo","vaca","casa"];
                     return array.sort();
               `,
-                execute:()=>{
-                    const array=["arbol","amarillo","vaca","casa"];
+                execute: () => {
+                    const array = ["arbol", "amarillo", "vaca", "casa"];
                     return array.sort();
                 }
-            },{
+            }, {
                 method: "Array.prototype.splice()",
-                description:"Agrega, elimina o reemplaza elementos",
-                example:``,
-                execute:()=>{
-                    const array=['Jan', 'March', 'April', 'June'];
-                    array.splice(3,0,'May');
+                description: "Agrega, elimina o reemplaza elementos",
+                example: ``,
+                execute: () => {
+                    const array = ['Jan', 'March', 'April', 'June'];
+                    array.splice(3, 0, 'May');
                     return array;
                 }
-                
-            },{
-                method:"iterator",
-                description:"Iterador de valores",
-                example:``,
-                execute:()=>{
-                    const array=[]
+
+            }, {
+                method: "iterator",
+                description: "Iterador de valores",
+                example: ``,
+                execute: () => {
+                    const array = []
                 }
-            },{
-                method:"Array.prototype.toLocaleString()",
-                description:"Convierte los elementos a cadena con formato regional",
-                example:``,
-                execute:()=>{
-                    const array=["Hoy es:",new Date()];
-                    return array.toLocaleString('es',{timeZone:'CET'});
+            }, {
+                method: "Array.prototype.toLocaleString()",
+                description: "Convierte los elementos a cadena con formato regional",
+                example: ``,
+                execute: () => {
+                    const array = ["Hoy es:", new Date()];
+                    return array.toLocaleString('es', { timeZone: 'CET' });
                 }
-            },{
-                method:"Array.prototype.toReversed()",
-                description:"Devuelve una copia del array invertida(sin modificar el original)",
-                example:`
+            }, {
+                method: "Array.prototype.toReversed()",
+                description: "Devuelve una copia del array invertida(sin modificar el original)",
+                example: `
                      const array=[1,2,3,4,5];
                      return array.toReversed();`,
-                execute:()=>{
-                     const array=[1,2,3,4,5];
-                     return array.toReversed();
-                
+                execute: () => {
+                    const array = [1, 2, 3, 4, 5];
+                    return array.toReversed();
+
                 }
-            },{
-                method:"Array.prototype.toSorted()",
+            }, {
+                method: "Array.prototype.toSorted()",
                 description: "Devuelve una copia ordenada.",
-                example:`
+                example: `
                     const array=[3,1,2,4,8,5];
                     return array.toSorted();`,
-                execute:()=>{
-                    const array=[3,1,2,4,8,5];
+                execute: () => {
+                    const array = [3, 1, 2, 4, 8, 5];
                     return array.toSorted();
                 }
-            },{
-                method:"Array.prototype.toSpliced()",
-                description:"Devuelve una copia con elementos eliminados y reemplazados",
-                example:`
+            }, {
+                method: "Array.prototype.toSpliced()",
+                description: "Devuelve una copia con elementos eliminados y reemplazados",
+                example: `
                     const array =["Enero","Febrero","Abril"];
                     return array.toSpliced(2,0,"Marzo");`,
-                execute:()=>{
-                    const array =["Enero","Febrero","Abril"];
-                    return array.toSpliced(2,0,"Marzo");
+                execute: () => {
+                    const array = ["Enero", "Febrero", "Abril"];
+                    return array.toSpliced(2, 0, "Marzo");
+                }
+            }, {
+                method: "Array.prototype.toString()",
+                description: "Convierte el array en una cadena",
+                example: `
+                    const array=[1,2,3,4,5];
+                    return array.toString;`,
+                execute: () => {
+                    const array = [1, 2, 3, 4, 5];
+                    return array.toString;
+                }
+            }, {
+                method: "Array.prototype.unshift()",
+                description: "Agrega elementos al inicio",
+                example: `     const array =[2,3,4,5];
+                    array.unshift(1);
+                    return array;
+                `,
+                execute: () => {
+                    const array = [2, 3, 4, 5];
+                    array.unshift(1);
+                    return array;
+
+                }
+            }, {
+                method: "Array.prototype.values()",
+                description: "Iterador de valores",
+                example: ``,
+                execute: () => {
+                    const array = [1, 2, 3, 4, 5];
+                    const iterator = array.values();
+                    for (const value of iterator) {
+                        console.log(value);
+                    }
+                    return "Mira la consola";
                 }
             },{
-                method:""
+                method:"Array.prototype.with()",
+                description:"Devuelve una copia modificada en un índice",
+                example:`
+                    const array=[1,1,1,1,1];
+                    return array.with(2,9);`,
+                execute:()=>{
+                    const array=[1,1,1,1,1];
+                    return array.with(2,9);
+                }
             }
         ];
         // Renderizando las secciones dinámicamente
