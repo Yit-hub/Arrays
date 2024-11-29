@@ -376,6 +376,25 @@ return array.filter(contieneUno);`,
                 execute:()=>{
                     const array=[]
                 }
+            },{
+                method:"Array.prototype.toLocaleString()",
+                description:"Convierte los elementos a cadena con formato regional",
+                example:``,
+                execute:()=>{
+                    const array=["Hoy es:",new Date()];
+                    return array.toLocaleString('es',{timeZone:'CET'});
+                }
+            },{
+                method:"Array.prototype.toReversed()",
+                description:"Devuelve una copia del array invertida(sin modificar el original)",
+                example:``,
+                execute:()=>{
+                     const array=[1,2,3,4,5];
+                     return array.toReversed();
+                
+                }
+            },{
+                method:""
             }
         ];
         // Renderizando las secciones dinámicamente
