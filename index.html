@@ -74,22 +74,24 @@ let result = array1.concat(array2);`,
                     return array.copyWithin(0, 2); // [30, 40, 30, 40]
                 }
             },
-            // Agrega más ejemplos para cada método aquí siguiendo este formato. <------------------------------AQUÍ-------------------------------->
             {
                 method: "Array.prototype.entries()",
                 description: "Crea un iterador de pares [índice, valor]",
-                example: `const frutas = ["Platano", "Manzana"];
+                example: `const frutas = ["Plátano", "Manzana"];
 const lista = frutas.entries();
-console.log(lista.next().value);
-console.log(lista.next().value);
+for (const elemento of lista) {
+    console.log(elemento);
+}
+
 
 }`,
                 execute: () => {
-                    const a = ["a", "b"];
-                    const lista = a.entries();
+                    const frutas = ["Plátano", "Manzana"];
+                    const lista = frutas.entries();
                     for (const elemento of lista) {
-                        return element;
+                        console.log(elemento);
                     }
+
                 },
             }, {
                 method: "Array.prototype.every()",
@@ -450,15 +452,15 @@ return array.filter(contieneUno);`,
                     }
                     return "Mira la consola";
                 }
-            },{
-                method:"Array.prototype.with()",
-                description:"Devuelve una copia modificada en un índice",
-                example:`
+            }, {
+                method: "Array.prototype.with()",
+                description: "Devuelve una copia modificada en un índice",
+                example: `
                     const array=[1,1,1,1,1];
                     return array.with(2,9);`,
-                execute:()=>{
-                    const array=[1,1,1,1,1];
-                    return array.with(2,9);
+                execute: () => {
+                    const array = [1, 1, 1, 1, 1];
+                    return array.with(2, 9);
                 }
             }
         ];
